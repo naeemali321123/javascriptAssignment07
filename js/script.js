@@ -1,11 +1,11 @@
 
-
-var num1 = 60;
-var num2 = 10;
-var reminder = num1 / num2;
-console.log('reminder', reminder);
-
-
+function bigNumberInTwoValue(){
+    var num1 = parseInt(document.getElementById("num1").value);
+    var num2 = parseInt(document.getElementById("num2").value);
+    var sum = num1 + num2;
+    document.getElementById("resultScreen").innerHTML = "Your Sum is", sum;
+    console.log("Your Sum is", sum);
+}
 // 2 * 1 = 2
 
 // var table = 2;
