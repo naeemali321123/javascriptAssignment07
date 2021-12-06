@@ -1,0 +1,62 @@
+@font-face {
+    font-family: Archivo-Bold;
+    src: url(../fonts/Archivo-Bold.ttf);
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    text-align: center;
+    padding: 50px 7%;
+}
+#container h2{
+    text-align: left;
+    padding: 50px;
+}
+#jsProgram01Section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px;
+    text-align: left;
+}
+#jsProgram01Section h2{
+    padding: 15px;
+}
+#jsProgram01Section form{
+    text-align: center;
+}
+#jsProgram01Section form input{
+    font-size: 18px;
+    padding: 10px 30px;
+    margin: 10px;
+}
+#jsProgram01Section form input::placeholder{
+    font-size: 22px;
+}
+#userValue  {
+    text-align: center;
+}
+#userValue h1{
+    padding: 40px;
+    color: green;
+}
+#actionPerformBtn{
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 100px;
+    color: red;
+}
+
+
+
+
+
