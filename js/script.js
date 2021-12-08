@@ -45,3 +45,16 @@ function bigNumberInThreeValue(){
 }
 
 // 3. Write a js program to check whether a number is negative, positive or zero.
+
+function findNumberCatagory(){
+    var num1 = parseInt(document.getElementById("q03Num1").value);
+    if(num1 == 0 ){
+        document.getElementById("q03ResultScreen").innerHTML = "Your Number is ZERO";
+    }
+    else{
+    document.getElementById("q03ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
+}
+
+}
+
+
