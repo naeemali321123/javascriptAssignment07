@@ -29,7 +29,7 @@
 #container hr{
     border: 1px solid black;
 }
-#jsProgram01Section{
+#jsProgramSection{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -37,19 +37,19 @@
     padding: 30px;
     text-align: left;
 }
-#jsProgram01Section h2{
+#jsProgramSection h2{
     padding: 15px;
 }
-#jsProgram01Section form{
+#jsProgramSection form{
     text-align: center;
 }
-#jsProgram01Section form input{
+#jsProgramSection form input{
     font-size: 18px;
     text-align: center;
     padding: 10px 30px;
     margin: 10px;
 }
-#jsProgram01Section form input::placeholder{
+#jsProgramSection form input::placeholder{
     font-size: 16px;
 }
 #userValue  {
@@ -57,7 +57,7 @@
 }
 #userValue h1{
     padding: 40px;
-    color: green;
+    color: rgb(165, 1, 165);
 }
 #actionPerformBtn{
     padding: 10px 30px;

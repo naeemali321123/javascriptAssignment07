@@ -1,10 +1,10 @@
-// Write a js program to find maximum between two numbers.
+//1. Write a js program to find maximum between two numbers.
 
 function bigNumberInTwoValue(){
     var num1 = parseInt(document.getElementById("q01Num1").value);
     var num2 = parseInt(document.getElementById("q01Num2").value);
     if(num1 === num2){
-        document.getElementById("q01ResultScreen").innerHTML = "My Dear Your 1st and 2nd value is SAME";
+        document.getElementById("q01ResultScreen").innerHTML = "My Dear -- The value of both inputs is the SAME."
     }
     else if(num1 > num2){
         document.getElementById("q01ResultScreen").innerHTML = "Your 1st Value is Max value That's " + num1;
@@ -13,11 +13,11 @@ function bigNumberInTwoValue(){
         document.getElementById("q01ResultScreen").innerHTML = "Your 2st Value is Max value That's " + num2;
     }
     else{
-    document.getElementById("q01ResultScreen").innerHTML = "My Dear Plz Type Your Numbers";
+    document.getElementById("q01ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
 }
 }
 
-// Write a js program to find maximum between Three numbers.
+//2. Write a js program to find maximum between Three numbers.
 
 function bigNumberInThreeValue(){
     var num1 = parseInt(document.getElementById("q2Num1").value);
@@ -25,7 +25,7 @@ function bigNumberInThreeValue(){
     var num3 = parseInt(document.getElementById("q2Num3").value);
 
     if(num1 === num2 && num2 === num3){
-        document.getElementById("q02ResultScreen").innerHTML = "My Dear Your All value is SAME";
+        document.getElementById("q02ResultScreen").innerHTML = "My Dear -- All value is SAME";
     }
     else if(num1 === "" || num2 === "" || num3 === ""){
         document.getElementById("q02ResultScreen").innerHTML = "My Dear Plz Type Only Numbers";
@@ -40,6 +40,8 @@ function bigNumberInThreeValue(){
         document.getElementById("q02ResultScreen").innerHTML = "Your 3rd Value is Max value That's " + num3;
     }
     else{
-    document.getElementById("q02ResultScreen").innerHTML = "My Dear Plz Type Your Numbers";
+    document.getElementById("q02ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
 }
 }
+
+// 3. Write a js program to check whether a number is negative, positive or zero.
