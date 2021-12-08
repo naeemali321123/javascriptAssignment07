@@ -1,82 +1,45 @@
+// Write a js program to find maximum between two numbers.
 
 function bigNumberInTwoValue(){
-    var num1 = parseInt(document.getElementById("num1").value);
-    var num2 = parseInt(document.getElementById("num2").value);
-    var sum = num1 + num2;
-    document.getElementById("resultScreen").innerHTML = "Your Sum is", sum;
-    console.log("Your Sum is", sum);
+    var num1 = parseInt(document.getElementById("q01Num1").value);
+    var num2 = parseInt(document.getElementById("q01Num2").value);
+    if(num1 === num2){
+        document.getElementById("q01ResultScreen").innerHTML = "My Dear Your 1st and 2nd value is SAME";
+    }
+    else if(num1 > num2){
+        document.getElementById("q01ResultScreen").innerHTML = "Your 1st Value is Max value That's " + num1;
+    }
+    else if(num1 < num2){
+        document.getElementById("q01ResultScreen").innerHTML = "Your 2st Value is Max value That's " + num2;
+    }
+    else{
+    document.getElementById("q01ResultScreen").innerHTML = "My Dear Plz Type Your Numbers";
 }
-// 2 * 1 = 2
+}
 
-// var table = 2;
-// var result = 0
-// for(let count = 0; count < 10; count++){
-//      result = table * count;
+// Write a js program to find maximum between Three numbers.
 
+function bigNumberInThreeValue(){
+    var num1 = parseInt(document.getElementById("q2Num1").value);
+    var num2 = parseInt(document.getElementById("q2Num2").value);
+    var num3 = parseInt(document.getElementById("q2Num3").value);
 
-//     console.log("Table No 2", '*',count, "=", result);
-// }
-
-
-// function sound() {
-//     var audio = new Audio('../mp3/click.mp3');
-//     audio.play();
-// }
-
-// function sendBtnValue(btnValue) {
-//     document.getElementById("currentOperand").innerHTML += btnValue;
-//     sound();
-// }
-
-// function allClear() {
-//     document.getElementById("currentOperand").innerHTML = null;
-//     document.getElementById("previousOperand").innerHTML = null;
-//     sound();
-// }
-
-// function plus() {
-//     var plusSign = "+";
-//     document.getElementById("currentOperand").innerHTML += plusSign;
-//     sound();
-// }
-
-// function minus() {
-//     var minusSign = "-";
-//     document.getElementById("currentOperand").innerHTML += minusSign;
-//     sound();
-// }
-
-// function multiply() {
-//     var multiplySign = "*";
-//     document.getElementById("currentOperand").innerHTML += multiplySign;
-//     sound();
-// }
-
-// function devide() {
-//     var devideSign = "/";
-//     document.getElementById("currentOperand").innerHTML += devideSign;
-//     sound();
-// }
-
-// function point() {
-//     var pointSign = ".";
-//     document.getElementById("currentOperand").innerHTML += pointSign;
-//     sound();
-// }
-
-// function equal() {
-//     sound();
-//     var screenData = document.getElementById("currentOperand").innerHTML;
-//     var result = document.getElementById("currentOperand").innerHTML = eval(screenData);
-//     var equalSign = " = "
-//     document.getElementById("currentOperand").innerHTML = result;
-//     document.getElementById("previousOperand").innerHTML = screenData += ' = '
-    
-// }
-
-// function deleteData() {
-//     var screenValue = document.getElementById("currentOperand").innerHTML;
-//     var deleteOne = screenValue.slice(0, -1);
-//     document.getElementById("currentOperand").innerHTML = deleteOne ;
-//     sound();
-// }
+    if(num1 === num2 && num2 === num3){
+        document.getElementById("q02ResultScreen").innerHTML = "My Dear Your All value is SAME";
+    }
+    else if(num1 === "" || num2 === "" || num3 === ""){
+        document.getElementById("q02ResultScreen").innerHTML = "My Dear Plz Type Only Numbers";
+    }
+    else if(num1 > num2 && num1 > num3){
+        document.getElementById("q02ResultScreen").innerHTML = "Your 1st Value is Max value That's " + num1;
+    }
+    else if(num2 > num1 && num2 > num3){
+        document.getElementById("q02ResultScreen").innerHTML = "Your 2nd Value is Max value That's " + num2;
+    }
+    else if(num3 > num1 && num3 > num2){
+        document.getElementById("q02ResultScreen").innerHTML = "Your 3rd Value is Max value That's " + num3;
+    }
+    else{
+    document.getElementById("q02ResultScreen").innerHTML = "My Dear Plz Type Your Numbers";
+}
+}
