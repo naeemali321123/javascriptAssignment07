@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Archivo-Bold;
-    src: url(../fonts/Archivo-Bold.ttf);
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 *,
@@ -9,27 +9,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Montserrat-Regular;
 }
-#container{
+
+#container {
     text-align: center;
     padding: 0px;
-    background: linear-gradient(to right, aqua, pink );
+    background: linear-gradient(to right, aqua, pink);
 }
-#container>h1{
+
+#container>h1 {
+    font-size: 22px;
     padding: 100px auto;
     background-color: rgb(168, 4, 168);
     color: white;
     position: fixed;
     width: 100%;
 }
-#container h2{
+
+#container h2 {
     text-align: left;
     padding: 100px 50px 50px 50px;
 }
-#container hr{
+
+#container hr {
     border: 1px solid black;
 }
-#jsProgramSection{
+
+#jsProgramSection {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -37,39 +44,45 @@
     padding: 30px;
     text-align: left;
 }
-#jsProgramSection h2{
+
+#jsProgramSection h2 {
     padding: 15px;
 }
-#jsProgramSection form{
+
+#jsProgramSection form {
     text-align: center;
 }
-#jsProgramSection form input{
+
+#jsProgramSection form input {
     font-size: 18px;
     text-align: center;
     padding: 10px 30px;
     margin: 10px;
 }
-#jsProgramSection form input::placeholder{
+
+#jsProgramSection form input::placeholder {
     font-size: 16px;
 }
-#userValue  {
+
+#userValue {
     text-align: center;
 }
-#userValue h1{
+
+#userValue h1 {
+    font-size: 22px;
+    margin: 20px 0px;
     padding: 40px;
     color: rgb(165, 1, 165);
+    border: 2px solid black;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, .50);
 }
-#actionPerformBtn{
-    padding: 10px 30px;
+
+#actionPerformBtn {
+    padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
     width: 200px;
     border-radius: 100px;
     color: red;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, .50);
 }
-
-
-
-
-
-
