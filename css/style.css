@@ -23,7 +23,8 @@
     padding: 100px auto;
     background-color: rgb(168, 4, 168);
     color: white;
-    position: fixed;
+    position: sticky;
+    top: 0px;
     width: 100%;
 }
 

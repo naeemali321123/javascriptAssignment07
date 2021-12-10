@@ -42,7 +42,8 @@ function bigNumberInTwoValue() {
     } else if (num1 < num2) {
         document.getElementById("q01ResultScreen").innerHTML = "Your 2st Value is Max value That's " + num2;
     } else {
-        document.getElementById("q01ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
+        document.getElementById("q01ResultScreen").innerHTML = "My Dear -- Plz Type Any Numbers";
+        alert("My Dear -- Plz Type Any Numbers");
     }
 }
 
@@ -64,7 +65,8 @@ function bigNumberInThreeValue() {
     } else if (num3 > num1 && num3 > num2) {
         document.getElementById("q02ResultScreen").innerHTML = "Your 3rd Value is Max value That's " + num3;
     } else {
-        document.getElementById("q02ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
+        document.getElementById("q02ResultScreen").innerHTML = "My Dear -- Plz Type Any Numbers ";
+        alert("My Dear -- Plz Type Any Numbers");
     }
 }
 
@@ -79,16 +81,21 @@ function findNumberCatagory() {
     } else if (num1 < 0) {
         document.getElementById("q03ResultScreen").innerHTML = num1 + " Number is NEGATIVE";
     } else {
-        document.getElementById("q03ResultScreen").innerHTML = "My Dear -- Plz Type Numbers";
+        document.getElementById("q03ResultScreen").innerHTML = " Plz Type Any Numbers";
+        alert("My Dear -- Plz Type Any Numbers");
     }
 }
 // 4. Write a js program to check whether a number is divisible by 5 and 11 or not.
 
 function divisibleOrNotBy5And11() {
-    var num1 = parseInt(document.getElementById("q04Num1").value);
+    var num1 = document.getElementById("q04Num1").value;
     var devideOnFive = num1 % 5;
     var devideOnEleven = num1 % 11;
-    if (devideOnFive === 0) {
+    if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
+        document.getElementById("q04ResultScreen").innerHTML = "My Dear! Plz Type Currect Year";
+        alert(" My Dear! Plz Type Currect Year");
+    }
+    else if (devideOnFive === 0) {
         document.getElementById("q04ResultScreen").innerHTML = "This Number is Divisible by 5";
         if (devideOnEleven === 0) {
             document.getElementById("q04ResultScreen").innerHTML = "This Number is Divisible by 5 and 11";
@@ -103,7 +110,7 @@ function divisibleOrNotBy5And11() {
             document.getElementById("q04ResultScreen").innerHTML = "Your Number is Divisible by 11 but not Devisible by 5";
         }
     } else {
-        document.getElementById("q04ResultScreen").innerHTML = "My Dear -- Type Any Number For Action if you have Typed any Number, then This Number can't be Divisible by 11 And 5";
+        document.getElementById("q04ResultScreen").innerHTML = "My Dear -- This Number can't be Divisible by 11 And 5";
     }
 }
 // 5. Write a js program to check whether a number is even or odd.
@@ -118,51 +125,62 @@ function evenOrOddNumber() {
         document.getElementById("q05ResultScreen").innerHTML = num1 + " Number is ODD";
     } else {
         document.getElementById("q05ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        alert("My Dear -- Plz Type Any Number");
+    }
+}
+// 6. Write a js program to check whether a year is leap year or not.
+function checkLeapYear() {
+    var num1 = document.getElementById("q06Num1").value;
+    if (num1 === 0) {
+        document.getElementById("q06ResultScreen").innerHTML = " Number is Zero Type Any Year";
+    }
+    else if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
+        document.getElementById("q06ResultScreen").innerHTML = " My Dear! Plz Type Currect Year";
+        alert(" My Dear! Plz Type Currect Year");
+    }
+    else if (0 === num1 % 4) {
+        document.getElementById("q06ResultScreen").innerHTML = num1 + " is a Leap Year";
+    }
+    else {
+        document.getElementById("q06ResultScreen").innerHTML = num1 + " is Not a Leap Year";
+    }
+}
+// 7. 7. Write a js program to check whether a character is alphabet or not.
+function checkCharacter4alphabet() {
+    var num1 = document.getElementById("q07Num1").value;
+    var character = /[A-Za-z]/;
+    if (num1 == "") {
+        document.getElementById("q07ResultScreen").innerHTML = " Plz Type Any Character";
+        alert("Plz Type Any Character");
+    }
+    else if (num1.match(character)) {
+        document.getElementById("q07ResultScreen").innerHTML = " This is a CHARACTER";
+    }
+    else {
+        document.getElementById("q07ResultScreen").innerHTML = " This is not a CHARACTER";
+    }
+}
+
+// 08. Write a js program to input any alphabet and check whether it is vowel or consonant.
+function checkAlphabet4VowelAndConsonant() {
+    var num1 = document.getElementById("q08Num1").value;
+    var vowel = /[a,e,i,o,u,A,E,I,O,U]/;
+    var consonant = /[a,b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z]/
+    if(num1 == ""){
+        document.getElementById("q08ResultScreen").innerHTML = "Plz Type Any Alphabet";
+        alert("Plz Type Any Alphabet");
+    }
+    else if (num1.match(vowel)) {
+        document.getElementById("q08ResultScreen").innerHTML = "The Alphabet is VOWEL";
+    }
+    else if(num1.match(consonant)){
+        document.getElementById("q08ResultScreen").innerHTML = "My Dear -- The Alphabet is CONSONANT";
+    }
+    else{
+        document.getElementById("q08ResultScreen").innerHTML = "My Dear -- This is not Alphabet";
     }
 }
 // till ok
-// 6. Write a js program to check whether a year is leap year or not.
-function leapYear() {
-    var num1 = parseInt(document.getElementById("q06Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q06ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q06ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q06ResultScreen").innerHTML = num1 + " Number is ODD";
-    } else {
-        document.getElementById("q06ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    }
-}
-// 7. Write a js program to check whether a character is alphabet or not.
-function characterCheck4alphabet() {
-    var num1 = parseInt(document.getElementById("q07Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q07ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q07ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q07ResultScreen").innerHTML = num1 + " Number is ODD";
-    } else {
-        document.getElementById("q07ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    }
-}
-// 08. Write a js program to check whether a character is alphabet or not.
-function character08Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q08Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q08ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q08ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q08ResultScreen").innerHTML = num1 + " Number is ODD";
-    } else {
-        document.getElementById("q08ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    }
-}
 // 09. Write a js program to check whether a character is alphabet or not.
 function character09Check4alphabet() {
     var num1 = parseInt(document.getElementById("q09Num1").value);
