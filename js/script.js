@@ -105,7 +105,7 @@ function divisibleOrNotBy5And11() {
     var devideOnFive = num1 % 5;
     var devideOnEleven = num1 % 11;
     if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
-        document.getElementById("q04ResultScreen").innerHTML = "My Dear! Plz Type Currect Year";
+        document.getElementById("q04ResultScreen").innerHTML = "My Dear! Plz Type Currect Number";
         alert(" My Dear! Plz Type Currect Year");
     } else if (devideOnFive === 0) {
         document.getElementById("q04ResultScreen").innerHTML = "This Number is Divisible by 5";
@@ -162,9 +162,9 @@ function checkCharacter4alphabet() {
         document.getElementById("q07ResultScreen").innerHTML = " Plz Type Any Character";
         alert("Plz Type Any Character");
     } else if (num1.match(character)) {
-        document.getElementById("q07ResultScreen").innerHTML = " This is a CHARACTER";
+        document.getElementById("q07ResultScreen").innerHTML = " This is a Alphabet";
     } else {
-        document.getElementById("q07ResultScreen").innerHTML = " This is not a CHARACTER";
+        document.getElementById("q07ResultScreen").innerHTML = " This is not a Alphabet";
     }
 }
 
@@ -189,7 +189,7 @@ function checkAlphabet4VowelAndConsonant() {
 function checkCharacterTypeOf() {
     var num1 = document.getElementById("q09Num1").value;
     var alphabet = /[A-Za-z]/
-    var specialCharacter = /[~,!,@,#,$,%,^,&,?]/;
+    var specialCharacter = /[~,!,@,#,$,%,^,&,?_,',",(,),;,:]/;
     var number = /[0,1,2,3,4,5,6,7,8,9]/
     var logicalOperater = /[/,*,-,-,+,<,>,=]/
     if (num1.match(alphabet)) {
