@@ -188,19 +188,20 @@ function checkAlphabet4VowelAndConsonant() {
 // 09. Write a js program to input any character and check whether it is alphabet, digit or special character.
 function checkCharacterTypeOf() {
     var num1 = document.getElementById("q09Num1").value;
-    var alphabet = /[A-Za-z]/
-    var specialCharacter = /[~,!,@,#,$,%,^,&,?_,',",(,),;,:]/;
-    var number = /[0,1,2,3,4,5,6,7,8,9]/
-    var logicalOperater = /[/,*,-,-,+,<,>,=]/
-    if (num1.match(alphabet)) {
+    var alphabet = /[A-Za-z]/;
+    var specialCharacters = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    var digit = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    if (num1 == "") {
+        document.getElementById("q09ResultScreen").innerHTML = "My Dear -- Plz Type Any Character";
+        alert("My Dear -- Plz Type Any Character");
+    } else if (num1.match(alphabet)) {
         document.getElementById("q09ResultScreen").innerHTML = "This Character is Alphabet";
-    } else if (num1.match(specialCharacter)) {
-        document.getElementById("q09ResultScreen").innerHTML = " This Character is Special Character";
-    } else if (num1.match(number)) {
-        document.getElementById("q09ResultScreen").innerHTML = " This is Number";
-    } else if (num1.match(logicalOperater)) {
-        document.getElementById("q09ResultScreen").innerHTML = " This is Logical Operater";
-    } else {
+    } else if (specialCharacters.test(num1)) {
+        document.getElementById("q09ResultScreen").innerHTML = "This Character is Special Characters";
+    } else if (digit.indexOf(num1)) {
+        document.getElementById("q09ResultScreen").innerHTML = " This Character is Digit";
+    }
+    else {
         alert("My Dear -- Plz Type Any Character");
         document.getElementById("q09ResultScreen").innerHTML = "My Dear -- Plz Type Any Character";
     }
@@ -221,61 +222,55 @@ function checkCharacter4LowercaseAndUppercase() {
 }
 // 11. Write a js program to input week number and print week day.
 function checkWeekDayByNumber() {
-    var num1 = parseInt(document.getElementById("q11Num1").value);
-    if (num1 == 1) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Sunday";
-    } else if (num1 == 2) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Monday";
-    } else if (num1 == 3) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Tuesday";
-    } else if (num1 == 4) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Wednesday";
-    } else if (num1 == 5) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Thursday";
-    } else if (num1 == 6) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Friday";
-    } else if (num1 == 7) {
-        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Saturday";
-    } else {
-        document.getElementById("q11ResultScreen").innerHTML = "My Dear -- Plz Type Currect Week Number";
-        alert("My Dear -- Plz Type Currect Week Number");
-    }
+    let num1 = document.getElementById("q11Num1").value;
+    let weekDay = ['Nothing Plz currect weed Day Number','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let myResult = 'This Day is: ' + weekDay[+num1];
+    document.getElementById("q11ResultScreen").innerHTML = myResult ;
 }
+
 // 12. Write a js program to input month number and print number of days in that month.
-function findMonthDay() {
-    var num1 = parseInt(document.getElementById("q12Num1").value);
-    if (num1 === 1) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month January";
-    } else if (num1 == 2) {
-        document.getElementById("q12ResultScreen").innerHTML = "28 Days in Month February";
-    } else if (num1 == 3) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month March";
-    } else if (num1 == 4) {
-        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month April";
-    } else if (num1 == 5) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month May";
-    } else if (num1 == 6) {
-        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month June";
-    } else if (num1 == 7) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month July";
-    } else if (num1 == 8) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month August";
-    } else if (num1 == 9) {
-        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month September";
-    } else if (num1 == 10) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month October";
-    } else if (num1 == 11) {
-        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month November";
-    } else if (num1 == 12) {
-        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month December";
-    } else {
-        document.getElementById("q12ResultScreen").innerHTML = "My Dear -- Plz Type Currect Month Number";
-        alert("My Dear -- Plz Type Currect Month Number");
-    }
-}
+// function findMonthDay() {
+//     var num1 = parseInt(document.getElementById("q12Num1").value);
+//     let monthOfYear = ['','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+//     let numberOfMonthDay = [3,29];
+//     let myResult01 = 'This Day Month is: ' + monthOfYear[+num1] + '';
+// if(num1 == 1 || num1 == 3 || num1 == 5 || num1 == 7 || num1 == 8 || num1 == 10 || num1 == 12){
+//     document.getElementById("q12ResultScreen").innerHTML = myResult31;
+// }else{
+//     document.getElementById("q12ResultScreen").innerHTML = myResult30;
+// }
+//     if (num1 === 1) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month January";
+//     } else if (num1 == 2) {
+//         document.getElementById("q12ResultScreen").innerHTML = "28 Days in Month February";
+//     } else if (num1 == 3) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month March";
+//     } else if (num1 == 4) {
+//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month April";
+//     } else if (num1 == 5) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month May";
+//     } else if (num1 == 6) {
+//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month June";
+//     } else if (num1 == 7) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month July";
+//     } else if (num1 == 8) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month August";
+//     } else if (num1 == 9) {
+//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month September";
+//     } else if (num1 == 10) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month October";
+//     } else if (num1 == 11) {
+//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month November";
+//     } else if (num1 == 12) {
+//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month December";
+//     } else {
+//         document.getElementById("q12ResultScreen").innerHTML = "My Dear -- Plz Type Currect Month Number";
+//         alert("My Dear -- Plz Type Currect Month Number");
+//     }
+// }
 // till ok
 // 13. Write a js program to count total number of notes in given amount.
-function checkNumberOfNote() {
+// function checkNumberOfNote() {
     // var num1 = parseInt(document.getElementById("q13Num1").value);
     // var coin1 = 1;
     // var coin2 = 2;
@@ -296,7 +291,7 @@ function checkNumberOfNote() {
     // } else {
     //     document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
     // }
-}
+// }
 // 14. Write a js program to check whether a character is alphabet or not.
 function character14Check4alphabet() {
     var num1 = parseInt(document.getElementById("q14Num1").value);
