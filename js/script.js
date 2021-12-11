@@ -69,6 +69,19 @@ function bigNumberInThreeValue() {
         alert("My Dear -- Plz Type Any Numbers");
     }
 }
+//  method # 02
+//     if (num1 > num2) {
+//         if (num1 > num3) {
+//             document.getElementById("q02ResultScreen").innerHTML = "Your First Value is Max value That's " + num1;
+//         } else {
+//             document.getElementById("q02ResultScreen").innerHTML = "Your Third Value is Max value That's " + num3;
+//         }
+//     } else if (num2 > num3) {
+//         document.getElementById("q02ResultScreen").innerHTML = "Your Second Value is Max value That's " + num2;
+//     } else {
+//         document.getElementById("q02ResultScreen").innerHTML = "Your Third Value is Max value That's " + num3;
+//     }
+// }
 
 // 3. Write a js program to check whether a number is negative, positive or zero.
 
@@ -94,8 +107,7 @@ function divisibleOrNotBy5And11() {
     if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
         document.getElementById("q04ResultScreen").innerHTML = "My Dear! Plz Type Currect Year";
         alert(" My Dear! Plz Type Currect Year");
-    }
-    else if (devideOnFive === 0) {
+    } else if (devideOnFive === 0) {
         document.getElementById("q04ResultScreen").innerHTML = "This Number is Divisible by 5";
         if (devideOnEleven === 0) {
             document.getElementById("q04ResultScreen").innerHTML = "This Number is Divisible by 5 and 11";
@@ -133,15 +145,12 @@ function checkLeapYear() {
     var num1 = document.getElementById("q06Num1").value;
     if (num1 === 0) {
         document.getElementById("q06ResultScreen").innerHTML = " Number is Zero Type Any Year";
-    }
-    else if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
+    } else if (num1 == "" || num1 == null || num1 == undefined || num1 == NaN) {
         document.getElementById("q06ResultScreen").innerHTML = " My Dear! Plz Type Currect Year";
         alert(" My Dear! Plz Type Currect Year");
-    }
-    else if (0 === num1 % 4) {
+    } else if (0 === num1 % 4) {
         document.getElementById("q06ResultScreen").innerHTML = num1 + " is a Leap Year";
-    }
-    else {
+    } else {
         document.getElementById("q06ResultScreen").innerHTML = num1 + " is Not a Leap Year";
     }
 }
@@ -152,11 +161,9 @@ function checkCharacter4alphabet() {
     if (num1 == "") {
         document.getElementById("q07ResultScreen").innerHTML = " Plz Type Any Character";
         alert("Plz Type Any Character");
-    }
-    else if (num1.match(character)) {
+    } else if (num1.match(character)) {
         document.getElementById("q07ResultScreen").innerHTML = " This is a CHARACTER";
-    }
-    else {
+    } else {
         document.getElementById("q07ResultScreen").innerHTML = " This is not a CHARACTER";
     }
 }
@@ -165,91 +172,130 @@ function checkCharacter4alphabet() {
 function checkAlphabet4VowelAndConsonant() {
     var num1 = document.getElementById("q08Num1").value;
     var vowel = /[a,e,i,o,u,A,E,I,O,U]/;
-    var consonant = /[a,b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z]/
-    if(num1 == ""){
+    var consonant = /[a,b,c,d,f,g,h,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z,A,B,C,D,F,G,H,J,K,L,M,N,P,Q,R,S,T,V,W,X,Y,Z]/
+    if (num1 == "") {
         document.getElementById("q08ResultScreen").innerHTML = "Plz Type Any Alphabet";
         alert("Plz Type Any Alphabet");
-    }
-    else if (num1.match(vowel)) {
+    } else if (num1.match(vowel)) {
         document.getElementById("q08ResultScreen").innerHTML = "The Alphabet is VOWEL";
-    }
-    else if(num1.match(consonant)){
+    } else if (num1.match(consonant)) {
         document.getElementById("q08ResultScreen").innerHTML = "My Dear -- The Alphabet is CONSONANT";
-    }
-    else{
+    } else {
         document.getElementById("q08ResultScreen").innerHTML = "My Dear -- This is not Alphabet";
     }
 }
-// till ok
-// 09. Write a js program to check whether a character is alphabet or not.
-function character09Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q09Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q09ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q09ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q09ResultScreen").innerHTML = num1 + " Number is ODD";
+
+// 09. Write a js program to input any character and check whether it is alphabet, digit or special character.
+function checkCharacterTypeOf() {
+    var num1 = document.getElementById("q09Num1").value;
+    var alphabet = /[A-Za-z]/
+    var specialCharacter = /[~,!,@,#,$,%,^,&,?]/;
+    var number = /[0,1,2,3,4,5,6,7,8,9]/
+    var logicalOperater = /[/,*,-,-,+,<,>,=]/
+    if (num1.match(alphabet)) {
+        document.getElementById("q09ResultScreen").innerHTML = "This Character is Alphabet";
+    } else if (num1.match(specialCharacter)) {
+        document.getElementById("q09ResultScreen").innerHTML = " This Character is Special Character";
+    } else if (num1.match(number)) {
+        document.getElementById("q09ResultScreen").innerHTML = " This is Number";
+    } else if (num1.match(logicalOperater)) {
+        document.getElementById("q09ResultScreen").innerHTML = " This is Logical Operater";
     } else {
-        document.getElementById("q09ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        alert("My Dear -- Plz Type Any Character");
+        document.getElementById("q09ResultScreen").innerHTML = "My Dear -- Plz Type Any Character";
     }
 }
-// 10. Write a js program to check whether a character is alphabet or not.
-function character10Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q10Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q10ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q10ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q10ResultScreen").innerHTML = num1 + " Number is ODD";
+// 10. Write a js program to check whether a character is uppercase or lowercase alphabet
+function checkCharacter4LowercaseAndUppercase() {
+    var num1 = document.getElementById("q10Num1").value;
+    var uppercase = /[A-Z]/
+    var lowercase = /[a-z]/
+    if (num1.match(uppercase)) {
+        document.getElementById("q10ResultScreen").innerHTML = "This Character is Uppercase";
+    } else if (num1.match(lowercase)) {
+        document.getElementById("q10ResultScreen").innerHTML = "This Character is Lowercase";
     } else {
-        document.getElementById("q10ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        document.getElementById("q10ResultScreen").innerHTML = "My Dear -- Plz Type Only Alphabet";
+        alert("My Dear -- Plz Type Only Alphabet");
     }
 }
-// 11. Write a js program to check whether a character is alphabet or not.
-function character11Check4alphabet() {
+// 11. Write a js program to input week number and print week day.
+function checkWeekDayByNumber() {
     var num1 = parseInt(document.getElementById("q11Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q11ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q11ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q11ResultScreen").innerHTML = num1 + " Number is ODD";
+    if (num1 == 1) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Sunday";
+    } else if (num1 == 2) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Monday";
+    } else if (num1 == 3) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Tuesday";
+    } else if (num1 == 4) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Wednesday";
+    } else if (num1 == 5) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Thursday";
+    } else if (num1 == 6) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Friday";
+    } else if (num1 == 7) {
+        document.getElementById("q11ResultScreen").innerHTML = "Week Day is Saturday";
     } else {
-        document.getElementById("q11ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        document.getElementById("q11ResultScreen").innerHTML = "My Dear -- Plz Type Currect Week Number";
+        alert("My Dear -- Plz Type Currect Week Number");
     }
 }
-// 12. Write a js program to check whether a character is alphabet or not.
-function character12Check4alphabet() {
+// 12. Write a js program to input month number and print number of days in that month.
+function findMonthDay() {
     var num1 = parseInt(document.getElementById("q12Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q12ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q12ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q12ResultScreen").innerHTML = num1 + " Number is ODD";
+    if (num1 === 1) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month January";
+    } else if (num1 == 2) {
+        document.getElementById("q12ResultScreen").innerHTML = "28 Days in Month February";
+    } else if (num1 == 3) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month March";
+    } else if (num1 == 4) {
+        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month April";
+    } else if (num1 == 5) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month May";
+    } else if (num1 == 6) {
+        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month June";
+    } else if (num1 == 7) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month July";
+    } else if (num1 == 8) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month August";
+    } else if (num1 == 9) {
+        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month September";
+    } else if (num1 == 10) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month October";
+    } else if (num1 == 11) {
+        document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month November";
+    } else if (num1 == 12) {
+        document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month December";
     } else {
-        document.getElementById("q12ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        document.getElementById("q12ResultScreen").innerHTML = "My Dear -- Plz Type Currect Month Number";
+        alert("My Dear -- Plz Type Currect Month Number");
     }
 }
-// 13. Write a js program to check whether a character is alphabet or not.
-function character13Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q13Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q13ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q13ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q13ResultScreen").innerHTML = num1 + " Number is ODD";
-    } else {
-        document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    }
+// till ok
+// 13. Write a js program to count total number of notes in given amount.
+function checkNumberOfNote() {
+    // var num1 = parseInt(document.getElementById("q13Num1").value);
+    // var coin1 = 1;
+    // var coin2 = 2;
+    // var coin5 = 5;
+    // var note10 = 10;
+    // var note20 = 20;
+    // var note50 = 50;
+    // var note10 = 100;
+    // var note500 = 500;
+    // var note1000 = 1000;
+    // var note5000 = 5000;
+    // if (num1 === 0) {
+    //     document.getElementById("q13ResultScreen").innerHTML = " Zero Note";
+    // } else if (num1 === 1) {
+    //     document.getElementById("q13ResultScreen").innerHTML = "1 Coin";
+    // } else if (num1 == 2) {
+    //     document.getElementById("q13ResultScreen").innerHTML = "2 Coin";
+    // } else {
+    //     document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+    // }
 }
 // 14. Write a js program to check whether a character is alphabet or not.
 function character14Check4alphabet() {
