@@ -229,45 +229,20 @@ function checkWeekDayByNumber() {
 }
 
 // 12. Write a js program to input month number and print number of days in that month.
-// function findMonthDay() {
-//     var num1 = parseInt(document.getElementById("q12Num1").value);
-//     let monthOfYear = ['','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-//     let numberOfMonthDay = [3,29];
-//     let myResult01 = 'This Day Month is: ' + monthOfYear[+num1] + '';
-// if(num1 == 1 || num1 == 3 || num1 == 5 || num1 == 7 || num1 == 8 || num1 == 10 || num1 == 12){
-//     document.getElementById("q12ResultScreen").innerHTML = myResult31;
-// }else{
-//     document.getElementById("q12ResultScreen").innerHTML = myResult30;
-// }
-//     if (num1 === 1) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month January";
-//     } else if (num1 == 2) {
-//         document.getElementById("q12ResultScreen").innerHTML = "28 Days in Month February";
-//     } else if (num1 == 3) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month March";
-//     } else if (num1 == 4) {
-//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month April";
-//     } else if (num1 == 5) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month May";
-//     } else if (num1 == 6) {
-//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month June";
-//     } else if (num1 == 7) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month July";
-//     } else if (num1 == 8) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month August";
-//     } else if (num1 == 9) {
-//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month September";
-//     } else if (num1 == 10) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month October";
-//     } else if (num1 == 11) {
-//         document.getElementById("q12ResultScreen").innerHTML = "30 Days in Month November";
-//     } else if (num1 == 12) {
-//         document.getElementById("q12ResultScreen").innerHTML = "31 Days in Month December";
-//     } else {
-//         document.getElementById("q12ResultScreen").innerHTML = "My Dear -- Plz Type Currect Month Number";
-//         alert("My Dear -- Plz Type Currect Month Number");
-//     }
-// }
+function findMonthDay() {
+    var num1 = parseInt(document.getElementById("q12Num1").value);
+    let monthOfYear = ['','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let myResult = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 31';
+    let myResult30 = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 31';
+if(num1 == 1 || num1 == 3 || num1 == 5 || num1 == 7 || num1 == 8 || num1 == 10 || num1 == 12){
+    document.getElementById("q12ResultScreen").innerHTML = myResult;
+}else if(num1 == 2 || num1 == 4 || num1 == 6 || num1 == 9 || num1 == 11){
+    document.getElementById("q12ResultScreen").innerHTML = myResult30;
+}else{
+    document.getElementById("q12ResultScreen").innerHTML = 'Plz Type Currect Number of Year';
+}
+}
+
 // till ok
 // 13. Write a js program to count total number of notes in given amount.
 // function checkNumberOfNote() {
