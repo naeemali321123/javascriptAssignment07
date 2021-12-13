@@ -200,8 +200,7 @@ function checkCharacterTypeOf() {
         document.getElementById("q09ResultScreen").innerHTML = "This Character is Special Characters";
     } else if (digit.indexOf(num1)) {
         document.getElementById("q09ResultScreen").innerHTML = " This Character is Digit";
-    }
-    else {
+    } else {
         alert("My Dear -- Plz Type Any Character");
         document.getElementById("q09ResultScreen").innerHTML = "My Dear -- Plz Type Any Character";
     }
@@ -223,49 +222,51 @@ function checkCharacter4LowercaseAndUppercase() {
 // 11. Write a js program to input week number and print week day.
 function checkWeekDayByNumber() {
     let num1 = document.getElementById("q11Num1").value;
-    let weekDay = ['Nothing Plz currect weed Day Number','Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    let weekDay = ['Nothing Plz currect weed Day Number', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let myResult = 'This Day is: ' + weekDay[+num1];
-    document.getElementById("q11ResultScreen").innerHTML = myResult ;
+    document.getElementById("q11ResultScreen").innerHTML = myResult;
 }
 
 // 12. Write a js program to input month number and print number of days in that month.
 function findMonthDay() {
     var num1 = parseInt(document.getElementById("q12Num1").value);
-    let monthOfYear = ['','January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let myResult = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 31';
-    let myResult30 = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 31';
-if(num1 == 1 || num1 == 3 || num1 == 5 || num1 == 7 || num1 == 8 || num1 == 10 || num1 == 12){
-    document.getElementById("q12ResultScreen").innerHTML = myResult;
-}else if(num1 == 2 || num1 == 4 || num1 == 6 || num1 == 9 || num1 == 11){
-    document.getElementById("q12ResultScreen").innerHTML = myResult30;
-}else{
-    document.getElementById("q12ResultScreen").innerHTML = 'Plz Type Currect Number of Year';
-}
+    let monthOfYear = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let myResult30 = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 30';
+    let myResult31 = 'This Month is: ' + monthOfYear[+num1] + ' in this month Day is 31';
+    if (num1 == 1 || num1 == 3 || num1 == 5 || num1 == 7 || num1 == 8 || num1 == 10 || num1 == 12) {
+        document.getElementById("q12ResultScreen").innerHTML = myResult31;
+    } else if (num1 == 2 || num1 == 4 || num1 == 6 || num1 == 9 || num1 == 11) {
+        document.getElementById("q12ResultScreen").innerHTML = myResult30;
+    } else {
+        document.getElementById("q12ResultScreen").innerHTML = 'Plz Type Currect Number of Year';
+    }
 }
 
-// till ok
 // 13. Write a js program to count total number of notes in given amount.
-// function checkNumberOfNote() {
-    // var num1 = parseInt(document.getElementById("q13Num1").value);
-    // var coin1 = 1;
-    // var coin2 = 2;
-    // var coin5 = 5;
-    // var note10 = 10;
-    // var note20 = 20;
-    // var note50 = 50;
-    // var note10 = 100;
-    // var note500 = 500;
-    // var note1000 = 1000;
-    // var note5000 = 5000;
-    // if (num1 === 0) {
-    //     document.getElementById("q13ResultScreen").innerHTML = " Zero Note";
-    // } else if (num1 === 1) {
-    //     document.getElementById("q13ResultScreen").innerHTML = "1 Coin";
-    // } else if (num1 == 2) {
-    //     document.getElementById("q13ResultScreen").innerHTML = "2 Coin";
-    // } else {
-    //     document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    // }
+function checkNumberOfNote() {
+    var num1 = parseInt(document.getElementById("q13Num1").value);
+    var note = ['1', '2', '5', '10', '20', '50', '100', '500', '1000', '5000']
+
+}
+// var coin1 = 1;
+// var coin2 = 2;
+// var coin5 = 5;
+// var note10 = 10;
+// var note20 = 20;
+// var note50 = 50;
+// var note10 = 100;
+// var note500 = 500;
+// var note1000 = 1000;
+// var note5000 = 5000;
+// if (num1 === 0) {
+//     document.getElementById("q13ResultScreen").innerHTML = " Zero Note";
+// } else if (num1 === 1) {
+//     document.getElementById("q13ResultScreen").innerHTML = "1 Coin";
+// } else if (num1 == 2) {
+//     document.getElementById("q13ResultScreen").innerHTML = "2 Coin";
+// } else {
+//     document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+// }
 // }
 // 14. Write a js program to check whether a character is alphabet or not.
 function character14Check4alphabet() {
