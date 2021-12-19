@@ -245,29 +245,43 @@ function findMonthDay() {
 // 13. Write a js program to count total number of notes in given amount.
 function checkNumberOfNote() {
     var num1 = parseInt(document.getElementById("q13Num1").value);
-    var note = ['1', '2', '5', '10', '20', '50', '100', '500', '1000', '5000']
+    if(num1 < 5000 && num1 >= 1000){
+        var floatNumberOf1000 = num1/1000;
+        var quanityNoteOf1000 = Math.floor(floatNumberOf1000);
+        var floatNumberOf500 = (floatNumberOf1000 - quanityNoteOf1000) * 1000 / 500;
+        var quanityNoteOf500 = Math.floor(floatNumberOf500);
+        var floatNumberOf100 = (floatNumberOf1000 - quanityNoteOf1000) * 500 / 100;
+        var quanityNoteOf100 = Math.floor(floatNumberOf100);
+        var floatNumberOf50 = (floatNumberOf100 - quanityNoteOf100) * 100 / 50;
+        var quanityNoteOf50 = Math.floor(floatNumberOf50);
+        var floatNumberOf20 = (floatNumberOf50 - quanityNoteOf50) * 50 / 20;
+        var quanityNoteOf20 = Math.floor(floatNumberOf20);
+        var floatNumberOf10 = (floatNumberOf20 - quanityNoteOf20) * 20 / 10;
+        var quanityNoteOf10 = Math.floor(floatNumberOf10);
+        var floatNumberOf5 = (floatNumberOf10 - quanityNoteOf10) * 10 / 5;
+        var quanityNoteOf5 = Math.floor(floatNumberOf5);
+        var floatNumberOf2 = (floatNumberOf5 - quanityNoteOf5) * 5 / 2;
+        var quanityNoteOf2 = Math.floor(floatNumberOf2);
+        var floatNumberOf1 = (floatNumberOf2 - quanityNoteOf2) * 2 / 1;
+        var quanityNoteOf1 = Math.floor(floatNumberOf1);
 
+
+        
+        document.getElementById("q13ResultScreen").innerHTML = 
+        " 1000 = " + quanityNoteOf1000 + " AND " + 
+        " 500 = " + quanityNoteOf500 + " AND " + 
+        " 100 = " + quanityNoteOf100 + " AND " + 
+        " 50 = " + quanityNoteOf50 + " AND " + 
+        " 20 = " + quanityNoteOf20 + " AND " + 
+        " 10 = " + quanityNoteOf10 + " AND " + 
+        " 5 = " + quanityNoteOf5 + " AND " + 
+        " 2 = " + quanityNoteOf2 + " AND " + 
+        " 1 = " + quanityNoteOf1 ;
+    }
+    else{
+        document.getElementById("q13ResultScreen").innerHTML = "sdfjdasf";
+    }
 }
-// var coin1 = 1;
-// var coin2 = 2;
-// var coin5 = 5;
-// var note10 = 10;
-// var note20 = 20;
-// var note50 = 50;
-// var note10 = 100;
-// var note500 = 500;
-// var note1000 = 1000;
-// var note5000 = 5000;
-// if (num1 === 0) {
-//     document.getElementById("q13ResultScreen").innerHTML = " Zero Note";
-// } else if (num1 === 1) {
-//     document.getElementById("q13ResultScreen").innerHTML = "1 Coin";
-// } else if (num1 == 2) {
-//     document.getElementById("q13ResultScreen").innerHTML = "2 Coin";
-// } else {
-//     document.getElementById("q13ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-// }
-// }
 // 14. Write a js program to check whether a character is alphabet or not.
 function character14Check4alphabet() {
     var num1 = parseInt(document.getElementById("q14Num1").value);
