@@ -253,84 +253,35 @@ function findMonthDay() {
 function checkNumberOfNote() {
     var num1 = parseInt(document.getElementById("q13Num1").value);
     var notes = ["5000", "1000", "500", "100", "50", "20", "10", "5", "2", "1"];
+    var notevariables = ["", "", "", "", "", "", "", "", "", ""];
 
-    var floatNumberOf5000 = num1 / 5000;
-    var quanityNoteOf5000 = Math.floor(floatNumberOf5000);
-    var num1 = num1 - quanityNoteOf5000 * 5000;
-
-    var floatNumberOf1000 = num1 / 1000;
-    var quanityNoteOf1000 = Math.floor(floatNumberOf1000);
-    var num1 = num1 - quanityNoteOf1000 * 1000;
-
-    var floatNumberOf500 = num1 / 500;
-    var quanityNoteOf500 = Math.floor(floatNumberOf500);
-    var num1 = num1 - quanityNoteOf500 * 500;
-
-    var floatNumberOf100 = num1 / 100;
-    var quanityNoteOf100 = Math.floor(floatNumberOf100);
-    var num1 = num1 - quanityNoteOf100 * 100;
-
-    var floatNumberOf50 = num1 / 50;
-    var quanityNoteOf50 = Math.floor(floatNumberOf50);
-    var num1 = num1 - quanityNoteOf50 * 50;
-
-    var floatNumberOf20 = num1 / 20;
-    var quanityNoteOf20 = Math.floor(floatNumberOf20);
-    var num1 = num1 - quanityNoteOf500 * 20;
-
-    var floatNumberOf10 = num1 / 10;
-    var quanityNoteOf10 = Math.floor(floatNumberOf10);
-    var num1 = num1 - quanityNoteOf10 * 10;
-
-    var floatNumberOf5 = num1 / 5;
-    var quanityNoteOf5 = Math.floor(floatNumberOf5);
-    var num1 = num1 - quanityNoteOf5 * 5;
-
-    var floatNumberOf2 = num1 / 2;
-    var quanityNoteOf2 = Math.floor(floatNumberOf2);
-    var num1 = num1 - quanityNoteOf2 * 2;
-
-    var floatNumberOf1 = num1 / 1;
-    var quanityNoteOf1 = Math.floor(floatNumberOf1);
-    var num1 = num1 - quanityNoteOf1 * 1;
-
-    var totalSum =
-        quanityNoteOf5000 * 5000 +
-        quanityNoteOf1000 * 1000 +
-        quanityNoteOf500 * 500 +
-        quanityNoteOf100 * 100 +
-        quanityNoteOf50 * 50 +
-        quanityNoteOf20 * 20 +
-        quanityNoteOf10 * 10 +
-        quanityNoteOf5 * 5 +
-        quanityNoteOf2 * 2 +
-        quanityNoteOf1 * 1;
+    for (let i = 0; i < notes.length; i++) {
+        notevariables[i] = parseInt(num1 / notes[i]);
+        var num1 = num1 - notevariables[i] * notes[i]
+    }
+    var totalSum = 0
+    for (let index = 0; index < notes.length; index++) {
+        totalSum = totalSum + notes[index] * notevariables[index]
+    }
+    var idies = ["totalOf5000","totalOf1000","totalOf500","totalOf100","totalOf50","totalOf20","totalOf10","totalOf5","totalOf2","totalOf1"]
+    for (let i = 0; i < notes.length; i++) {
+        document.getElementById(idies[i]).innerHTML = notevariables[i] * notes[i];
+    }
 
 
-    document.getElementById("totalOf5000").innerHTML = quanityNoteOf5000 * 5000;
-    document.getElementById("totalOf1000").innerHTML = quanityNoteOf1000 * 1000;
-    document.getElementById("totalOf500").innerHTML = quanityNoteOf500 * 500;
-    document.getElementById("totalOf100").innerHTML = quanityNoteOf100 * 100;
-    document.getElementById("totalOf50").innerHTML = quanityNoteOf50 * 50;
-    document.getElementById("totalOf20").innerHTML = quanityNoteOf20 * 20;
-    document.getElementById("totalOf10").innerHTML = quanityNoteOf10 * 10;
-    document.getElementById("totalOf5").innerHTML = quanityNoteOf5 * 5;
-    document.getElementById("totalOf2").innerHTML = quanityNoteOf2 * 2;
-    document.getElementById("totalOf1").innerHTML = quanityNoteOf1 * 1;
-
-    document.getElementById("notes5000").innerHTML = quanityNoteOf5000;
-    document.getElementById("notes1000").innerHTML = quanityNoteOf1000;
-    document.getElementById("notes500").innerHTML = quanityNoteOf500;
-    document.getElementById("notes100").innerHTML = quanityNoteOf100;
-    document.getElementById("notes50").innerHTML = quanityNoteOf50;
-    document.getElementById("notes20").innerHTML = quanityNoteOf20;
-    document.getElementById("notes10").innerHTML = quanityNoteOf10;
-    document.getElementById("notes5").innerHTML = quanityNoteOf5;
-    document.getElementById("notes2").innerHTML = quanityNoteOf2;
-    document.getElementById("notes1").innerHTML = quanityNoteOf1;
+    document.getElementById("notes5000").innerHTML = notevariables[0];
+    document.getElementById("notes1000").innerHTML = notevariables[1];
+    document.getElementById("notes500").innerHTML = notevariables[2];
+    document.getElementById("notes100").innerHTML = notevariables[3];
+    document.getElementById("notes50").innerHTML = notevariables[4];
+    document.getElementById("notes20").innerHTML = notevariables[5];
+    document.getElementById("notes10").innerHTML = notevariables[6];
+    document.getElementById("notes5").innerHTML = notevariables[7];
+    document.getElementById("notes2").innerHTML = notevariables[8];
+    document.getElementById("notes1").innerHTML = notevariables[9];
     document.getElementById("grandTotal").innerHTML = totalSum;
-
 }
+
 // 14. Write a js program to check whether a character is alphabet or not.
 function character14Check4alphabet() {
     var num1 = parseInt(document.getElementById("q14Num1").value);
