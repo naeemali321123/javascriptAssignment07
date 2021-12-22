@@ -267,18 +267,10 @@ function checkNumberOfNote() {
     for (let i = 0; i < notes.length; i++) {
         document.getElementById(idies[i]).innerHTML = notevariables[i] * notes[i];
     }
-
-
-    document.getElementById("notes5000").innerHTML = notevariables[0];
-    document.getElementById("notes1000").innerHTML = notevariables[1];
-    document.getElementById("notes500").innerHTML = notevariables[2];
-    document.getElementById("notes100").innerHTML = notevariables[3];
-    document.getElementById("notes50").innerHTML = notevariables[4];
-    document.getElementById("notes20").innerHTML = notevariables[5];
-    document.getElementById("notes10").innerHTML = notevariables[6];
-    document.getElementById("notes5").innerHTML = notevariables[7];
-    document.getElementById("notes2").innerHTML = notevariables[8];
-    document.getElementById("notes1").innerHTML = notevariables[9];
+    var notesIdies = ["notes5000","notes1000","notes500","notes100","notes50","notes20","notes10","notes5","notes2","notes1"]
+    for (let i = 0; i < notesIdies.length; i++) {
+        document.getElementById(notesIdies[i]).innerHTML = notevariables[i];
+    }
     document.getElementById("grandTotal").innerHTML = totalSum;
 }
 
