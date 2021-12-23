@@ -254,21 +254,15 @@ function checkNumberOfNote() {
     var num1 = parseInt(document.getElementById("q13Num1").value);
     var notes = ["5000", "1000", "500", "100", "50", "20", "10", "5", "2", "1"];
     var notevariables = ["", "", "", "", "", "", "", "", "", ""];
+    var totalSum = 0;
+    var idies = ["totalOf5000", "totalOf1000", "totalOf500", "totalOf100", "totalOf50", "totalOf20", "totalOf10", "totalOf5", "totalOf2", "totalOf1"]
+    var notesIdies = ["notes5000", "notes1000", "notes500", "notes100", "notes50", "notes20", "notes10", "notes5", "notes2", "notes1"]
 
     for (let i = 0; i < notes.length; i++) {
         notevariables[i] = parseInt(num1 / notes[i]);
         var num1 = num1 - notevariables[i] * notes[i]
-    }
-    var totalSum = 0
-    for (let index = 0; index < notes.length; index++) {
-        totalSum = totalSum + notes[index] * notevariables[index]
-    }
-    var idies = ["totalOf5000","totalOf1000","totalOf500","totalOf100","totalOf50","totalOf20","totalOf10","totalOf5","totalOf2","totalOf1"]
-    for (let i = 0; i < notes.length; i++) {
+        totalSum = totalSum + notes[i] * notevariables[i]
         document.getElementById(idies[i]).innerHTML = notevariables[i] * notes[i];
-    }
-    var notesIdies = ["notes5000","notes1000","notes500","notes100","notes50","notes20","notes10","notes5","notes2","notes1"]
-    for (let i = 0; i < notesIdies.length; i++) {
         document.getElementById(notesIdies[i]).innerHTML = notevariables[i];
     }
     document.getElementById("grandTotal").innerHTML = totalSum;
