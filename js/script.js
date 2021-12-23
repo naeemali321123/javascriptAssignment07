@@ -268,45 +268,82 @@ function checkNumberOfNote() {
     document.getElementById("grandTotal").innerHTML = totalSum;
 }
 
-// 14. Write a js program to check whether a character is alphabet or not.
-function character14Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q14Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q14ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q14ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q14ResultScreen").innerHTML = num1 + " Number is ODD";
+// 14. Write a js program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following:
+
+function checkGrade() {
+    var Physics = parseInt(document.getElementById("q14Num1").value);
+    var Chemistry = parseInt(document.getElementById("q14Num2").value);
+    var Biology = parseInt(document.getElementById("q14Num3").value);
+    var Mathematics = parseInt(document.getElementById("q14Num4").value);
+    var Computer = parseInt(document.getElementById("q14Num5").value);
+
+    var totalMarks = 500;
+    var percentage = (Physics + Chemistry + Biology + Mathematics + Computer) / totalMarks * 100;
+
+    if (percentage >= 90) {
+        document.getElementById("q14ResultScreen").innerHTML = " Grade A";
+    } else if (percentage >= 80) {
+        document.getElementById("q14ResultScreen").innerHTML = " Grade B";
+    } else if (percentage >= 70) {
+        document.getElementById("q14ResultScreen").innerHTML = " Grade C";
+    } else if (percentage >= 60) {
+        document.getElementById("q14ResultScreen").innerHTML = " Grade D";
+    } else if (percentage >= 40) {
+        document.getElementById("q14ResultScreen").innerHTML = " Grade E";
     } else {
-        document.getElementById("q14ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        document.getElementById("q14ResultScreen").innerHTML = " Grade F";
     }
 }
-// 15. Write a js program to check whether a character is alphabet or not.
-function character15Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q15Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q15ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q15ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q15ResultScreen").innerHTML = num1 + " Number is ODD";
+// 15. Write a js program to input basic salary of an employee and calculate its Gross salary according to  following:
+// Basic Salary <= 10000 : HRA = 20%, DA = 80%
+// Basic Salary <= 20000 : HRA = 25%, DA = 90%
+// Basic Salary > 20000 : HRA = 30%, DA = 95%
+
+function findGrossSalary() {
+    var basicSalary = parseInt(document.getElementById("q15Num1").value);
+
+    if (basicSalary <= 10000) {
+        grossSalary = basicSalary + basicSalary / 100 * 20 + basicSalary / 100 * 80;
+    } else if (basicSalary <= 20000) {
+        grossSalary = basicSalary + basicSalary / 100 * 25 + basicSalary / 100 * 90;
     } else {
-        document.getElementById("q15ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
+        grossSalary = basicSalary + basicSalary / 100 * 30 + basicSalary / 100 * 95;
+    }
+    document.getElementById("q15ResultScreen").innerHTML = "Your Gross Salary is: " + grossSalary;
+}
+
+// 16. Write a js program to input electricity unit charges and calculate total electricity bill according to the given condition:
+// For first 50 units Rs. 0.50/unit
+// For next 100 units Rs. 0.75/unit
+// For next 100 units Rs. 1.20/unit
+// For unit above 250 Rs. 1.50/unit
+// An additional surcharge of 20% is added to the bill
+// Deadline: 08/12/2021!
+
+function findTotalElectricityBill() {
+    var units = document.getElementById("q16Num1").value;
+    if (units === 0 || units === "") {
+        document.getElementById("q16ResultScreen").innerHTML = "Plz Enter Your Meter Units ";
+    } else if (units <= 50) {
+        var basicBill = units * 0.50;
+        var totalBill = basicBill / 100 * 20 + basicBill;
+        document.getElementById("q16ResultScreen").innerHTML = "Total Electricity Bill is: " + totalBill + " RS";
+    } else if (units > 50 && units <= 150) {
+        var after50units = units - 50;
+        var basicBill = (50 * 0.50) + (after50units * 0.75);
+        var totalBill = basicBill / 100 * 20 + basicBill;
+
+        document.getElementById("q16ResultScreen").innerHTML = "Total Electricity Bill is: " + totalBill + " RS";
+    } else if (units > 150 && units <= 250) {
+        var after150units = units - 150;
+        var basicBill = (50 * 0.50) + (100 * 0.75) + (after150units * 1.20);
+        var totalBill = basicBill / 100 * 20 + basicBill;
+        document.getElementById("q16ResultScreen").innerHTML = "Total Electricity Bill is: " + totalBill + " RS";
+    } else {
+        var after250units = units - 250;
+        var basicBill = (50 * 0.50) + (100 * 0.75) + (100 * 1.20) + (after250units * 1.50);
+        var totalBill = basicBill / 100 * 20 + basicBill;
+        document.getElementById("q16ResultScreen").innerHTML = "Total Electricity Bill is: " + totalBill + " RS";
     }
 }
-// 16. Write a js program to check whether a character is alphabet or not.
-function character16Check4alphabet() {
-    var num1 = parseInt(document.getElementById("q16Num1").value);
-    var persentageTwo = num1 % 2;
-    if (num1 === 0) {
-        document.getElementById("q16ResultScreen").innerHTML = " Number is EVEN";
-    } else if (persentageTwo === 0) {
-        document.getElementById("q16ResultScreen").innerHTML = num1 + " Number is EVEN";
-    } else if (persentageTwo === 1) {
-        document.getElementById("q16ResultScreen").innerHTML = num1 + " Number is ODD";
-    } else {
-        document.getElementById("q16ResultScreen").innerHTML = "My Dear -- Plz Type Any Number";
-    }
-}
+// complete 16 quiz
